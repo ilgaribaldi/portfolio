@@ -10,7 +10,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('1')
 
   useEffect(() => {
-    document.title = "Marcelo's Porftolio"
+    document.title = "Marcelo's Portfolio"
   }, [])
 
   const handleMenuClick = (e) => {
