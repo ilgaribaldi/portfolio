@@ -9,8 +9,10 @@ import {
   Space,
   Tag,
   Collapse,
+  Avatar,
 } from 'antd'
 import './index.css'
+import profile from './profile.jpg'
 
 const { Title, Text } = Typography
 
@@ -64,18 +66,50 @@ const About = () => {
 
   return (
     <div>
-      <Title level={2}>About Me</Title>
-      <Text>
-        Industrial Physics Engineer with a results-oriented focus and experience
-        in full stack development and technology consulting. Expert in
-        optimization techniques, data extraction, and machine learning models
-        for data-driven analysis.
-      </Text>
+      <div
+        style={{
+          backgroundColor: '#fff',
+          padding: '2rem',
+          borderRadius: '8px',
+          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        <Title
+          level={2}
+          style={{
+            marginBottom: '2rem',
+            color: '#1890ff',
+            textTransform: 'uppercase',
+            letterSpacing: '2px',
+          }}
+        >
+          About Me
+        </Title>
+        <Space direction="vertical" size={24}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <Avatar src={profile} size={64} style={{ marginRight: '1rem' }} />
+            <div>
+              <Title level={4} style={{ marginBottom: '0', marginTop: '-3px' }}>
+                Marcelo Villarreal
+              </Title>
+              <Text type="secondary" style={{ marginTop: '0' }}>
+                Full Stack Developer
+              </Text>
+            </div>
+          </div>
+          <Text style={{ lineHeight: '1.5' }}>
+            Industrial Physics Engineer with a results-oriented focus and
+            experience in full stack development and technology consulting.
+            Expert in optimization techniques, data extraction, and machine
+            learning models for data-driven analysis.
+          </Text>
+        </Space>
+      </div>
       <Divider />
       <Title level={3}>Employment History</Title>
       <Timeline>
         <Timeline.Item>
-          <Collapse defaultActiveKey={['1']}>
+          <Collapse defaultActiveKey={[]}>
             <Collapse.Panel
               header={
                 <>
@@ -100,7 +134,7 @@ const About = () => {
           </Collapse>
         </Timeline.Item>
         <Timeline.Item>
-          <Collapse defaultActiveKey={['1']}>
+          <Collapse defaultActiveKey={[]}>
             <Collapse.Panel
               header={
                 <>
