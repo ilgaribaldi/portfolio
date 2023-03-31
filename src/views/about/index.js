@@ -49,13 +49,13 @@ const About = () => {
     },
     {
       name: 'Git',
-      description: ['Project version control', 'collaboration'],
+      description: ['Project version control', 'Collaboration'],
     },
     {
       name: 'Docker',
       description: [
         'Environment simplification',
-        'Isolated Testing Environments',
+        'Isolated testing environments',
       ],
     },
     {
