@@ -131,6 +131,7 @@ const About = () => {
                   <div
                     key={point}
                     style={{ marginRight: '1px', marginBottom: '10px' }}
+                    className="tag-wrapper"
                   >
                     <Tag color="#5af">{point}</Tag>
                   </div>

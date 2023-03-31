@@ -19,4 +19,24 @@
   transform: translateY(-50%);
 }
 
+.tag-wrapper {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.tech-tag {
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.tag-wrapper:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tag-wrapper:hover .tech-tag {
+  transform: scale(1.1);
+  border: 1px solid #5af;
+}
+
 

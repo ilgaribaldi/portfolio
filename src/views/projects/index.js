@@ -22,8 +22,7 @@ const Projects = () => {
                   className="project-gif"
                   style={{
                     borderRadius: '0.5rem',
-                    border: '3px solid #333',
-                    padding: '0.5rem',
+                    border: '1px solid #333',
                   }}
                 />
               </Col>
@@ -64,7 +63,7 @@ const Projects = () => {
                   width={window.innerWidth <= 576 ? 265 : 500}
                   style={{
                     borderRadius: '0.5rem',
-                    border: '3px solid #333',
+                    border: '1px solid #333',
                   }}
                 />
               </Col>
