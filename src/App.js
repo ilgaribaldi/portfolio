@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Layout, Menu } from "antd";
+import About from "./views/about/index";
+import Projects from "./views/projects/index";
+import Contact from "./views/contact/index";
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
+  const [activeTab, setActiveTab] = useState("1");
+
+  const handleMenuClick = (e) => {
+    setActiveTab(e.key);
+  };
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "1":
+        return <About />;
+      case "2":
+        return <Projects />;
+      case "3":
+        return <Contact />;
+      default:
+        return <About />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Layout>
+      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={["1"]}
+          onClick={handleMenuClick}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Menu.Item key="1">About</Menu.Item>
+          <Menu.Item key="2">Projects</Menu.Item>
+          <Menu.Item key="3">Contact</Menu.Item>
+        </Menu>
+      </Header>
+      <Content style={{ padding: "0 50px", marginTop: 64 }}>
+        <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
+          {renderContent()}
+        </div>
+      </Content>
+      <Footer style={{ textAlign: "center" }}>
+        Marcelo Villarreal ©{new Date().getFullYear()} Created with Ant Design
+      </Footer>
+    </Layout>
   );
 }
 
