@@ -32,19 +32,50 @@ function App() {
 
   return (
     <Layout>
-      <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['1']}
-          onClick={handleMenuClick}
-          style={{ display: 'flex', justifyContent: 'center' }}
-        >
-          <Menu.Item key="1">About</Menu.Item>
-          <Menu.Item key="2">Projects</Menu.Item>
-          <Menu.Item key="3">Contact</Menu.Item>
-        </Menu>
-      </Header>
+      ;<Header
+  style={{
+    position: 'fixed',
+    zIndex: 1,
+    width: '100%',
+  }}
+>
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100%',
+    }}
+  >
+    <Menu
+      theme="dark"
+      mode="horizontal"
+      defaultSelectedKeys={['1']}
+      onClick={handleMenuClick}
+      style={{ display: 'flex', justifyContent: 'center', flexGrow: 1 }}
+    >
+      <Menu.Item
+        key="1"
+        style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
+      >
+        About
+      </Menu.Item>
+      <Menu.Item
+        key="2"
+        style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
+      >
+        Projects
+      </Menu.Item>
+      <Menu.Item
+        key="3"
+        style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
+      >
+        Contact
+      </Menu.Item>
+    </Menu>
+  </div>
+</Header>
+
       <Content
         style={{
           padding: '0 20px',
