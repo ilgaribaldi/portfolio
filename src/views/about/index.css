@@ -8,6 +8,14 @@
   padding-left: 1rem;
 }
 
+.custom-bullet-item {
+  transition: transform 0.2s ease;
+}
+
+.custom-bullet-item:hover {
+  transform: scale(1.02);
+}
+
 .custom-bullet-item:before {
   content: '\2022';
   color: #333;
