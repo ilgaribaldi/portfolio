@@ -1,0 +1,22 @@
+.custom-bullet-list {
+  padding-left: 1.5rem;
+}
+
+.custom-bullet-item {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.custom-bullet-item:before {
+  content: '\2022';
+  color: #333;
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+

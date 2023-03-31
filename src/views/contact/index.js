@@ -14,21 +14,29 @@ const Contact = () => {
       <Title level={2}>Contact</Title>
       <Row gutter={[16, 16]} justify="center" align="middle">
         <Col style={{ textAlign: 'center' }}>
-          <Avatar
-            size={64}
-            icon={<MailOutlined />}
-            style={{ backgroundColor: '#FDB813' }}
-          />
+          <a href="mailto:marcelovillarrealx@outlook.com">
+            <Avatar
+              size={64}
+              icon={<MailOutlined />}
+              style={{ backgroundColor: '#FDB813' }}
+            />
+          </a>
           <Text style={{ display: 'block', marginTop: '10px' }}>
             <a href="mailto:marcelovillarrealx@outlook.com">Email</a>
           </Text>
         </Col>
         <Col style={{ textAlign: 'center' }}>
-          <Avatar
-            size={64}
-            icon={<LinkedinOutlined />}
-            style={{ backgroundColor: '#0A66C2' }}
-          />
+          <a
+            href="https://www.linkedin.com/in/marcelo-villarreal-64b605263"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Avatar
+              size={64}
+              icon={<LinkedinOutlined />}
+              style={{ backgroundColor: '#0A66C2' }}
+            />
+          </a>
           <Text style={{ display: 'block', marginTop: '10px' }}>
             <a
               href="https://www.linkedin.com/in/marcelo-villarreal-64b605263"
@@ -40,11 +48,17 @@ const Contact = () => {
           </Text>
         </Col>
         <Col style={{ textAlign: 'center' }}>
-          <Avatar
-            size={64}
-            icon={<GithubOutlined />}
-            style={{ backgroundColor: '#24292E' }}
-          />
+          <a
+            href="https://github.com/ilgaribaldi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Avatar
+              size={64}
+              icon={<GithubOutlined />}
+              style={{ backgroundColor: '#24292E' }}
+            />
+          </a>
           <Text style={{ display: 'block', marginTop: '10px' }}>
             <a
               href="https://github.com/ilgaribaldi"
@@ -60,5 +74,5 @@ const Contact = () => {
   )
 }
 
-
 export default Contact
+

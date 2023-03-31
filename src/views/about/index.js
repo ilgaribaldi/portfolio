@@ -1,5 +1,6 @@
 import React from 'react'
 import { Typography, Timeline, Row, Col, Divider, List, Space, Tag } from 'antd'
+import './index.css'
 
 const { Title, Text } = Typography
 
@@ -38,6 +39,17 @@ const About = () => {
       name: 'Git',
       description: ['Project version control', 'collaboration'],
     },
+    {
+      name: 'Docker',
+      description: [
+        'Environment simplification',
+        'Isolated Testing Environments',
+      ],
+    },
+    {
+      name: 'GraphQL',
+      description: ['Building APIs', 'Microservices'],
+    },
   ]
 
   return (
@@ -58,10 +70,16 @@ const About = () => {
             <Text strong>Jul, 2022 - Present</Text>
             <Text type="secondary">San Pedro Garza Garcia</Text>
           </Space>
-          <List
-            dataSource={job1Description}
-            renderItem={(item) => <List.Item>{item}</List.Item>}
-          />
+          <Text>
+            <List
+              size="small"
+              className="custom-bullet-list"
+              dataSource={job1Description}
+              renderItem={(item) => (
+                <List.Item className="custom-bullet-item">{item}</List.Item>
+              )}
+            />
+          </Text>
         </Timeline.Item>
         <Timeline.Item>
           <Title level={4}>Full Stack Consultant, Abdotech</Title>
@@ -69,21 +87,30 @@ const About = () => {
             <Text strong>Feb, 2022 - Present</Text>
             <Text type="secondary">San Pedro Garza Garcia</Text>
           </Space>
-          <List
-            dataSource={job2Description}
-            renderItem={(item) => <List.Item>{item}</List.Item>}
-          />
+          <Text>
+            <List
+              size="small"
+              className="custom-bullet-list"
+              dataSource={job2Description}
+              renderItem={(item) => (
+                <List.Item className="custom-bullet-item">{item}</List.Item>
+              )}
+            />
+          </Text>
         </Timeline.Item>
       </Timeline>
       <Divider />
       <Title level={3}>Education</Title>
       <Row>
-        <Col span={8}>
-          <Text strong>
-            Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM)
-          </Text>
+        <Col>
+          <Row>
+            <Text strong>
+              Instituto Tecnológico y de Estudios Superiores de Monterrey
+              (ITESM)
+            </Text>
+          </Row>
           <Space>
-            <Text strong>Jul, 2022 - Present</Text>
+            <Text strong>Aug, 2018 - Jun, 2023</Text>
             <Text type="secondary">San Pedro Garza Garcia</Text>
           </Space>
         </Col>
@@ -91,21 +118,28 @@ const About = () => {
       <Text>Engineering Physics, Cumulative average grade: 95/100</Text>
       <Divider />
       <Title level={3}>Key Tech Skills</Title>
-      <List
-        itemLayout="vertical"
-        dataSource={techSkills}
-        renderItem={(item) => (
-          <List.Item>
-            <List.Item.Meta title={<Tag color="#f50">{item.name}</Tag>} />
-            {item.description.map((point) => (
-              <Space key={point}>
-                <Text>{<Tag color="#5af">{point}</Tag>}</Text>
-                <Divider type="vertical" />
-              </Space>
-            ))}
-          </List.Item>
-        )}
-      />
+      <Row gutter={[16, 16]} wrap>
+        {techSkills.map((item) => (
+          <Col xs={24} sm={12} md={6} key={item.name}>
+            <List.Item style={{ listStyleType: 'none', paddingLeft: 0 }}>
+              <List.Item.Meta
+                title={<Tag color="#f50">{item.name}</Tag>}
+                style={{ marginBottom: '-8px' }}
+              />
+              <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                {item.description.map((point) => (
+                  <div
+                    key={point}
+                    style={{ marginRight: '1px', marginBottom: '10px' }}
+                  >
+                    <Tag color="#5af">{point}</Tag>
+                  </div>
+                ))}
+              </div>
+            </List.Item>
+          </Col>
+        ))}
+      </Row>
     </div>
   )
 }
