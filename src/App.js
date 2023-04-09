@@ -18,7 +18,7 @@ const ScrollToTop = () => {
 };
 
 function App() {
-  const [selectedKeys, setSelectedKeys] = useState(['/about'])
+  const [selectedKeys, setSelectedKeys] = useState(['/portfolio'])
 
   const UpdateMenuItem = () => {
     const location = useLocation()
@@ -64,19 +64,19 @@ function App() {
                 key="/about"
                 style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
               >
-                <NavLink to="/about" end>About</NavLink>
+                <NavLink to="/portfolio" end>About</NavLink>
               </Menu.Item>
               <Menu.Item
                 key="/projects"
                 style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
               >
-                <NavLink to="/projects">Projects</NavLink>
+                <NavLink to="/portfolio/projects">Projects</NavLink>
               </Menu.Item>
               <Menu.Item
                 key="/contact"
                 style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
               >
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/portfolio/contact">Contact</NavLink>
               </Menu.Item>
             </Menu>
           </div>
@@ -90,9 +90,9 @@ function App() {
         >
           <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
             <Routes>
-              <Route path="/about" element={<About />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/portfolio" element={<About />} />
+              <Route path="/portfolio/projects" element={<Projects />} />
+              <Route path="/portfolio/contact" element={<Contact />} />
             </Routes>
           </div>
         </Content>
