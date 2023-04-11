@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Layout, Menu } from 'antd'
 import { BrowserRouter as Router, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import About from './views/about/index'
@@ -17,18 +17,7 @@ const ScrollToTop = () => {
   return null;
 };
 
-function App() {
-  const [selectedKeys, setSelectedKeys] = useState(['/portfolio'])
-
-  const UpdateMenuItem = () => {
-    const location = useLocation()
-
-    useEffect(() => {
-      setSelectedKeys([location.pathname])
-    }, [location.pathname])
-
-    return null
-  }
+const App = () => {
 
   useEffect(() => {
     document.title = "Marcelo's Portfolio"
@@ -37,7 +26,6 @@ function App() {
   return (
     <Router>
       <ScrollToTop/>
-      <UpdateMenuItem />
       <Layout>
         <Header
           style={{
@@ -57,14 +45,14 @@ function App() {
             <Menu
               theme="dark"
               mode="horizontal"
-              selectedKeys={selectedKeys}
+              selectedKeys={['1']}
               style={{ display: 'flex', justifyContent: 'center', flexGrow: 1 }}
             >
               <Menu.Item
-                key="/about"
+                key="/portfolio"
                 style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
               >
-                <NavLink to="/" end>About</NavLink>
+                <NavLink to="/portfolio" end>About</NavLink>
               </Menu.Item>
               <Menu.Item
                 key="/projects"
@@ -90,7 +78,7 @@ function App() {
         >
           <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
             <Routes>
-              <Route path="/" element={<About />} />
+              <Route path="/portfolio" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
