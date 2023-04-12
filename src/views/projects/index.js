@@ -17,7 +17,11 @@ const Projects = () => {
               <Col
                 xs={24}
                 md={12}
-                style={{ display: 'flex', alignItems: 'center' }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
               >
                 <Image
                   src={optimizer}
@@ -131,7 +135,11 @@ const Projects = () => {
               <Col
                 xs={24}
                 md={12}
-                style={{ display: 'flex', alignItems: 'center' }}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
               >
                 <Image
                   src={looking}

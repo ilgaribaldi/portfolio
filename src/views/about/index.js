@@ -10,7 +10,7 @@ import {
   Tag,
   Collapse,
   Avatar,
-  Card
+  Card,
 } from 'antd';
 import './index.css';
 import profile from './profile.jpg';
