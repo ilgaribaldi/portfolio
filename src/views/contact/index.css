@@ -1,6 +1,7 @@
 @media only screen and (max-width: 576px) {
   .contact-container {
     text-align: center;
+    position: relative;
   }
 
   .ant-row {
@@ -12,4 +13,18 @@
   .ant-col {
     text-align: left;
   }
+}
+
+.particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 1;
 }
