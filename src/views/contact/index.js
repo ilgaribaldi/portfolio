@@ -4,6 +4,9 @@ import {
   MailOutlined,
   GithubOutlined,
   LinkedinOutlined,
+  EnvironmentOutlined,
+  PhoneOutlined,
+  ScheduleOutlined,
 } from '@ant-design/icons';
 import './index.css';
 
@@ -76,14 +79,19 @@ const Contact = () => {
       <Divider style={{ marginTop: '2rem', marginBottom: '2rem' }} />
       <Row justify="center" gutter={[32, 32]}>
         <Col>
+          <EnvironmentOutlined
+            style={{ marginRight: '4px', color: '#1890ff' }}
+          />
           <Text strong>Location: </Text>
           <Text>SPGG, Mexico</Text>
         </Col>
         <Col>
+          <PhoneOutlined style={{ marginRight: '4px', color: '#52c41a' }} />
           <Text strong>Phone: </Text>
           <Text>+52 (81) 8396-1930</Text>
         </Col>
         <Col>
+          <ScheduleOutlined style={{ marginRight: '4px', color: '#faad14' }} />
           <Text strong>Availability: </Text>
           <Text>Varies</Text>
         </Col>

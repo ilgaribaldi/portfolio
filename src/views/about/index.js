@@ -10,9 +10,11 @@ import {
   Tag,
   Collapse,
   Avatar,
+  Card
 } from 'antd';
 import './index.css';
 import profile from './profile.jpg';
+import { ClockCircleOutlined } from '@ant-design/icons';
 
 const { Title, Text } = Typography;
 
@@ -106,7 +108,9 @@ const About = () => {
         </Space>
       </div>
       <Divider />
-      <Title level={3}>Employment History</Title>
+      <Title level={3} style={{ marginBottom: '22px' }}>
+        Employment History
+      </Title>
       <Timeline>
         <Timeline.Item>
           <Collapse defaultActiveKey={[]}>
@@ -161,43 +165,88 @@ const About = () => {
       </Timeline>
       <Divider />
       <Title level={3}>Education</Title>
-      <Row>
-        <Col>
-          <Row>
-            <Text strong>
-              Instituto Tecnológico y de Estudios Superiores de Monterrey
-              (ITESM)
-            </Text>
-          </Row>
-          <Space>
-            <Text strong>Aug, 2018 - Jun, 2023</Text>
-            <Text type="secondary">San Pedro Garza Garcia</Text>
-          </Space>
+      <Row gutter={[16, 16]}>
+        <Col span={24}>
+          <Card
+            hoverable
+            style={{
+              borderRadius: '10px',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            }}
+          >
+            <Row>
+              <Col span={24}>
+                <Text strong style={{ fontSize: '1.2em' }}>
+                  Instituto Tecnológico y de Estudios Superiores de Monterrey
+                  (ITESM)
+                </Text>
+              </Col>
+            </Row>
+            <Row>
+              <Col style={{ marginRight: '10px' }}>
+                <Space>
+                  <ClockCircleOutlined
+                    style={{ color: 'rgba(0, 0, 0, 0.45)' }}
+                  />
+                  <Text strong>Aug, 2018 - Jun, 2023</Text>
+                </Space>
+              </Col>
+              <Col>
+                <Space>
+                  <Text type="secondary">San Pedro Garza Garcia</Text>
+                </Space>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Text>
+                  Engineering Physics, Cumulative average grade:{' '}
+                  <Text strong>95/100</Text>
+                </Text>
+              </Col>
+            </Row>
+          </Card>
         </Col>
       </Row>
-      <Text>Engineering Physics, Cumulative average grade: 95/100</Text>
       <Divider />
       <Title level={3}>Key Tech Skills</Title>
       <Row gutter={[16, 16]} wrap>
         {techSkills.map((item) => (
           <Col xs={24} sm={12} md={6} key={item.name}>
-            <List.Item style={{ listStyleType: 'none', paddingLeft: 0 }}>
-              <List.Item.Meta
-                title={<Tag color="#f50">{item.name}</Tag>}
-                style={{ marginBottom: '-8px' }}
-              />
-              <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                {item.description.map((point) => (
-                  <div
-                    key={point}
-                    style={{ marginRight: '1px', marginBottom: '10px' }}
-                    className="tag-wrapper"
-                  >
-                    <Tag color="#5af">{point}</Tag>
-                  </div>
-                ))}
-              </div>
-            </List.Item>
+            <Card
+              style={{
+                borderRadius: '10px',
+                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                width: '100%',
+                height: '100%',
+                transition: 'transform 0.3s ease-out',
+              }}
+              hoverable
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.05)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+              }}
+            >
+              <List.Item style={{ listStyleType: 'none', paddingLeft: 0 }}>
+                <List.Item.Meta
+                  title={<Tag color="#f50">{item.name}</Tag>}
+                  style={{ marginBottom: '-8px' }}
+                />
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+                  {item.description.map((point) => (
+                    <div
+                      key={point}
+                      style={{ marginRight: '1px', marginBottom: '10px' }}
+                      className="tag-wrapper"
+                    >
+                      <Tag color="#5af">{point}</Tag>
+                    </div>
+                  ))}
+                </div>
+              </List.Item>
+            </Card>
           </Col>
         ))}
       </Row>

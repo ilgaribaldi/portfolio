@@ -10,7 +10,6 @@ import {
 import About from './views/about/index';
 import Projects from './views/projects/index';
 import Contact from './views/contact/index';
-import ParticlesBackground from './components/ParticlesBackground';
 
 const { Header, Content, Footer } = Layout;
 
@@ -52,13 +51,17 @@ const App = () => {
               theme="dark"
               mode="horizontal"
               selectedKeys={['1']}
-              style={{ display: 'flex', justifyContent: 'center', flexGrow: 1 }}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                flexGrow: 1,
+              }}
             >
               <Menu.Item
                 key="/portfolio"
                 style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
               >
-                <NavLink to="/portfolio" end>
+                <NavLink to="/portfolio" activeStyle={{ color: '#1890ff' }}>
                   About
                 </NavLink>
               </Menu.Item>
@@ -84,7 +87,6 @@ const App = () => {
             background: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
           }}
         >
-          <ParticlesBackground />
           <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
             <Routes>
               <Route path="/portfolio" element={<About />} />
