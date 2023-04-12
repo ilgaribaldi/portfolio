@@ -147,14 +147,12 @@ const Projects = () => {
                 <Title
                   level={4}
                   style={{
-                    marginBottom: '24px',
+                    marginBottom: '32px',
                     fontWeight: 'bold',
                     color: '#1890ff',
                     textTransform: 'uppercase',
                     letterSpacing: '2px',
                     textAlign: 'center',
-                    borderBottom: '2px solid #1890ff',
-                    paddingBottom: '8px',
                   }}
                 >
                   Overview
