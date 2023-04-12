@@ -1,11 +1,18 @@
-import React, { useEffect } from 'react'
-import { Layout, Menu } from 'antd'
-import { BrowserRouter as Router, NavLink, Route, Routes, useLocation } from 'react-router-dom'
-import About from './views/about/index'
-import Projects from './views/projects/index'
-import Contact from './views/contact/index'
+import React, { useEffect } from 'react';
+import { Layout, Menu } from 'antd';
+import {
+  BrowserRouter as Router,
+  NavLink,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
+import About from './views/about/index';
+import Projects from './views/projects/index';
+import Contact from './views/contact/index';
+import ParticlesBackground from './components/ParticlesBackground';
 
-const { Header, Content, Footer } = Layout
+const { Header, Content, Footer } = Layout;
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -18,14 +25,13 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
-
   useEffect(() => {
-    document.title = "Marcelo's Portfolio"
-  }, [])
+    document.title = "Marcelo's Portfolio";
+  }, []);
 
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Layout>
         <Header
           style={{
@@ -52,7 +58,9 @@ const App = () => {
                 key="/portfolio"
                 style={{ fontWeight: 'bold', letterSpacing: '0.05rem' }}
               >
-                <NavLink to="/portfolio" end>About</NavLink>
+                <NavLink to="/portfolio" end>
+                  About
+                </NavLink>
               </Menu.Item>
               <Menu.Item
                 key="/projects"
@@ -76,6 +84,7 @@ const App = () => {
             background: 'linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%)',
           }}
         >
+          <ParticlesBackground />
           <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
             <Routes>
               <Route path="/portfolio" element={<About />} />
@@ -89,7 +98,7 @@ const App = () => {
         </Footer>
       </Layout>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

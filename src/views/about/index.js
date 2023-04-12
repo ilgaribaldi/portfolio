@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Typography,
   Timeline,
@@ -10,23 +10,23 @@ import {
   Tag,
   Collapse,
   Avatar,
-} from 'antd'
-import './index.css'
-import profile from './profile.jpg'
+} from 'antd';
+import './index.css';
+import profile from './profile.jpg';
 
-const { Title, Text } = Typography
+const { Title, Text } = Typography;
 
 const About = () => {
   const job1Description = [
     'Implemented RESTful APIs that enabled the generation of delivery guides for packages, automating the logistics process.',
     'Implemented APIs using AWS Lambda functions to extract critical data such as package status and Google results analysis.',
     "Designed a route optimizer to reduce transport costs and transit time, implemented with Google's Distance Matrix API, and deployed through an AWS Lambda function.",
-  ]
+  ];
 
   const job2Description = [
     'Developed collections, queries, and mutations in databases such as MongoDB, providing advanced functionality to various platforms.',
     'Designed and implemented front end components using React.js. allowing for efficient and scalable deployment of web applications.',
-  ]
+  ];
 
   const techSkills = [
     {
@@ -62,7 +62,7 @@ const About = () => {
       name: 'GraphQL',
       description: ['Building APIs', 'Microservices'],
     },
-  ]
+  ];
 
   return (
     <div>
@@ -202,7 +202,7 @@ const About = () => {
         ))}
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

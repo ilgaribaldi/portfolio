@@ -1,10 +1,10 @@
-import React from 'react'
-import { Card, Typography, Row, Col, Image, List } from 'antd'
-import optimizer from './optimizer.gif'
-import looking from './looking.gif'
-import './index.css'
+import React from 'react';
+import { Card, Typography, Row, Col, Image, List } from 'antd';
+import optimizer from './optimizer.gif';
+import looking from './looking.gif';
+import './index.css';
 
-const { Title, Text } = Typography
+const { Title, Text } = Typography;
 
 const Projects = () => {
   return (
@@ -14,11 +14,15 @@ const Projects = () => {
         <Col xs={24} md={24}>
           <Card title="Route Optimizer" style={{ marginBottom: '1rem' }}>
             <Row gutter={[16, 16]}>
-              <Col xs={24} md={12} style={{ display: 'flex', alignItems: 'center' }}>
+              <Col
+                xs={24}
+                md={12}
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
                 <Image
                   src={optimizer}
                   alt="Route Optimizer GIF"
-                  width={window.innerWidth <= 576 ? "100%" : "95%"}
+                  width={window.innerWidth <= 576 ? '100%' : '95%'}
                   className="project-gif"
                   style={{
                     borderRadius: '0.5rem',
@@ -124,11 +128,15 @@ const Projects = () => {
         <Col xs={24} md={24}>
           <Card title="Direct Gaze Detection" style={{ marginBottom: '1rem' }}>
             <Row gutter={[16, 16]}>
-              <Col xs={24} md={12} style={{ display: 'flex', alignItems: 'center' }}>
+              <Col
+                xs={24}
+                md={12}
+                style={{ display: 'flex', alignItems: 'center' }}
+              >
                 <Image
                   src={looking}
                   alt="Direct Gaze Detection GIF"
-                  width={window.innerWidth <= 576 ? "100%" : "95%"}
+                  width={window.innerWidth <= 576 ? '100%' : '95%'}
                   style={{
                     borderRadius: '0.5rem',
                     border: '1px solid #333',
@@ -233,7 +241,7 @@ const Projects = () => {
         </Col>
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

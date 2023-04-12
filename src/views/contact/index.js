@@ -1,13 +1,13 @@
-import React from 'react'
-import { Avatar, Typography, Row, Col, Divider } from 'antd'
+import React from 'react';
+import { Avatar, Typography, Row, Col, Divider } from 'antd';
 import {
   MailOutlined,
   GithubOutlined,
   LinkedinOutlined,
-} from '@ant-design/icons'
-import './index.css'
+} from '@ant-design/icons';
+import './index.css';
 
-const { Title, Text } = Typography
+const { Title, Text } = Typography;
 
 const Contact = () => {
   return (
@@ -90,8 +90,7 @@ const Contact = () => {
       </Row>
       <Divider style={{ marginTop: '2rem', marginBottom: '2rem' }} />
     </div>
-  )
-}
+  );
+};
 
-export default Contact
-
+export default Contact;
