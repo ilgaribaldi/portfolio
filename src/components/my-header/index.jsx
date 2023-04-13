@@ -4,6 +4,7 @@ import {
   NavLink,
 } from 'react-router-dom';
 import { HomeOutlined, ProjectOutlined, MailOutlined } from '@ant-design/icons';
+import './index.css'
 
 const { Header } = Layout;
 
@@ -41,6 +42,7 @@ const MyHeader = () => {
         >
           <Menu.Item
             key="/portfolio"
+            className="menu-item"
             style={{
               fontWeight: 'bold',
               letterSpacing: '0.05rem',
@@ -67,7 +69,36 @@ const MyHeader = () => {
             </NavLink>
           </Menu.Item>
           <Menu.Item
+            key="/skills"
+            className="menu-item"
+            style={{
+              fontWeight: 'bold',
+              letterSpacing: '0.05rem',
+              margin: '0 10px',
+              border: 'none',
+              position: 'relative',
+            }}
+          >
+            <NavLink to="/skills" style={{ color: '#fff' }}>
+              <HomeOutlined style={{ marginRight: 8 }} />
+              Skills
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  height: 2,
+                  backgroundColor: '#1890ff',
+                  opacity: 0,
+                  transition: 'opacity 0.3s ease',
+                }}
+              />
+            </NavLink>
+          </Menu.Item>
+          <Menu.Item
             key="/projects"
+            className="menu-item"
             style={{
               fontWeight: 'bold',
               letterSpacing: '0.05rem',
@@ -95,6 +126,7 @@ const MyHeader = () => {
           </Menu.Item>
           <Menu.Item
             key="/contact"
+            className="menu-item"
             style={{
               fontWeight: 'bold',
               letterSpacing: '0.05rem',

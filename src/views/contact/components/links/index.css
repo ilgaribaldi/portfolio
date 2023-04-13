@@ -1,0 +1,21 @@
+@media only screen and (max-width: 576px) {
+  .contact-container {
+    text-align: center;
+    position: relative;
+  }
+
+  .ant-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ant-col {
+    text-align: left;
+  }
+}
+
+.contact-container {
+  position: relative;
+  z-index: 0;
+}

@@ -1,20 +1,36 @@
 import React from 'react';
-import BackgroundParticles from '../../components/particles';
-import MyContact from './components/my-contact';
+import { BackgroundParticles } from '../../components/particles';
+import Links from './components/links';
+import Info from './components/info';
 
 
 const Contact = () => {
   return (
     <div
       style={{
-        position: 'relative',
         width: '100%',
-        minHeight: '85vh',
         backgroundColor: 'white',
       }}
     >
-      <BackgroundParticles />
-      <MyContact />
+      <div
+        className="hello"
+        style={{
+          padding: '2rem',
+          position: 'relative',
+          zIndex: 1,
+        }}
+      >
+        <div style={{ marginTop: '3rem'}}>
+          <BackgroundParticles />
+          <Links />
+        </div>
+      </div>
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        <Info />
+      </div>
+      <div style={{ minHeight: '50vh', position: 'relative' }}>
+        <BackgroundParticles />
+      </div>
     </div>
   );
 };

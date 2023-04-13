@@ -1,0 +1,58 @@
+.tag-wrapper {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.tech-tag {
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.tag-wrapper:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.tag-wrapper:hover .tech-tag {
+  transform: scale(1.1);
+  border: 1px solid #5af;
+}
+
+.container {
+  display: inline-block;
+}
+
+.text {
+  font-size: 5em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(15), cursor .4s step-end infinite alternate;
+}
+
+@media (max-width: 767px) {
+  .text {
+    font-size: 2.5em;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes typing {
+  from {width: 0}
+}

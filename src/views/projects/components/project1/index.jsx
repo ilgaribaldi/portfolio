@@ -8,7 +8,7 @@ const { Title, Text } = Typography;
 const Project1 = () => {
   return (
     <Col xs={24} md={24}>
-      <Card title="Route Optimizer" style={{ marginBottom: '1rem' }}>
+      <Card title="Route Optimizer" style={{ marginBottom: '1rem', backgroundColor: "white"}}>
         <Row gutter={[16, 16]}>
           <Col
             xs={24}
@@ -23,7 +23,6 @@ const Project1 = () => {
               src={optimizer}
               alt="Route Optimizer GIF"
               width={window.innerWidth <= 576 ? '100%' : '75%'}
-              className="project-gif"
               style={{
                 borderRadius: '0.5rem',
                 border: '1px solid #333',

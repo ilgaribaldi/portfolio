@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import particlesParams from './params';
+import { particlesParams, tunnelParams, confettiParams, hexagonParams } from './params';
 
 const style = {
   position: 'absolute',
@@ -15,4 +15,16 @@ const BackgroundParticles = () => {
   return <Particles params={particlesParams} style={style} />;
 };
 
-export default BackgroundParticles;
+const BackgroundTunnels = () => {
+  return <Particles params={tunnelParams} style={style} />;
+};
+
+const BackgroundConfetti = () => {
+  return <Particles params={confettiParams} style={style} />;
+};
+
+const BackgroundHexagons = () => {
+  return <Particles params={hexagonParams} style={style} />;
+};
+
+export { BackgroundParticles, BackgroundTunnels, BackgroundConfetti, BackgroundHexagons };

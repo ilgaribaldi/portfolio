@@ -1,15 +1,21 @@
 import React from 'react';
-import { Typography, Row, Col, List, Tag, Card } from 'antd';
+import { Row, Col, List, Tag, Card } from 'antd';
 import './index.css';
+import { Divider } from 'antd';
 import info from './info.json';
 
-const { Title } = Typography;
+
 const { techSkills } = info;
 
 const KeyTechSkills = () => {
   return (
     <div>
-      <Title level={3}>Key Tech Skills</Title>
+      <div style={{display: "flex", justifyContent: "center", position: "relative"}}>
+        <div class="container">
+          <p class="text"> Key Tech Skills </p>
+        </div>
+      </div>
+      <Divider />
       <Row gutter={[16, 16]} wrap>
         {techSkills.map((item) => (
           <Col xs={24} sm={12} md={6} key={item.name}>

@@ -6,6 +6,7 @@ import {
 import About from '../../views/about/index';
 import Projects from '../../views/projects/index';
 import Contact from '../../views/contact/index';
+import Skills from '../../views/skills/index';
 import { Layout } from 'antd';
 
 
@@ -24,6 +25,7 @@ const MyContent = () => {
           <Route path="/portfolio" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/skills" element={<Skills />} />
         </Routes>
       </div>
     </Content>
