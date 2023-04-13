@@ -1,6 +1,7 @@
 import React from 'react';
-import Particles from 'react-particles';
-import { particlesParams, tunnelParams, confettiParams, hexagonParams } from './params';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { particlesParams } from './params';
 
 const style = {
   position: 'absolute',
@@ -11,20 +12,25 @@ const style = {
   zIndex: 1,
 };
 
-const BackgroundParticles = () => {
-  return <Particles params={particlesParams} style={style} />;
+const particlesInit = async (main) => {
+  console.log(main);
+  await loadFull(main);
 };
 
-const BackgroundTunnels = () => {
-  return <Particles params={tunnelParams} style={style} />;
+const particlesLoaded = (container) => {
+  console.log(container);
 };
 
-const BackgroundConfetti = () => {
-  return <Particles params={confettiParams} style={style} />;
+const BackgroundParticles = ({ id }) => {
+  return (
+    <Particles
+      id={id}
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={particlesParams}
+      style={style}
+    />
+  );
 };
 
-const BackgroundHexagons = () => {
-  return <Particles params={hexagonParams} style={style} />;
-};
-
-export { BackgroundParticles, BackgroundTunnels, BackgroundConfetti, BackgroundHexagons };
+export { BackgroundParticles };

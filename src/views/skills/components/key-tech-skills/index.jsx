@@ -12,7 +12,7 @@ const KeyTechSkills = () => {
     <div>
       <div style={{display: "flex", justifyContent: "center", position: "relative"}}>
         <div class="container">
-          <p class="text"> Key Tech Skills </p>
+          <p class="text"> My tech stack. </p>
         </div>
       </div>
       <Divider />

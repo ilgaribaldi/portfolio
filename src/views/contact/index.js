@@ -17,19 +17,31 @@ const Contact = () => {
         style={{
           padding: '2rem',
           position: 'relative',
-          zIndex: 1,
+          zIndex: 2,
         }}
       >
-        <div style={{ marginTop: '3rem'}}>
-          <BackgroundParticles />
+        <BackgroundParticles id="1" />
+        <div
+          style={{
+            marginTop: '3rem',
+            marginBottom: '3rem',
+            position: 'relative',
+          }}
+        >
           <Links />
         </div>
       </div>
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Info />
       </div>
-      <div style={{ minHeight: '50vh', position: 'relative' }}>
-        <BackgroundParticles />
+      <div
+        style={{
+          minHeight: '55vh',
+          position: 'relative',
+          zIndex: 2,
+        }}
+      >
+        <BackgroundParticles id="2" />
       </div>
     </div>
   );
