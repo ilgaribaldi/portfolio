@@ -3,7 +3,12 @@ import { Menu, Layout } from 'antd';
 import {
   NavLink,
 } from 'react-router-dom';
-import { HomeOutlined, ProjectOutlined, MailOutlined } from '@ant-design/icons';
+import {
+  HomeOutlined,
+  ProjectOutlined,
+  MailOutlined,
+  RocketOutlined,
+} from '@ant-design/icons';
 import './index.css'
 
 const { Header } = Layout;
@@ -80,7 +85,7 @@ const MyHeader = () => {
             }}
           >
             <NavLink to="/skills" style={{ color: '#fff' }}>
-              <HomeOutlined style={{ marginRight: 8 }} />
+              <RocketOutlined style={{ marginRight: 8 }} />
               Skills
               <div
                 style={{
