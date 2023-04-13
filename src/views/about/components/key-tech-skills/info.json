@@ -1,0 +1,37 @@
+{
+  "techSkills": [
+    {
+      "name": "MERN Stack",
+      "description": ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"]
+    },
+    {
+      "name": "Python",
+      "description": [
+        "Data management",
+        "Data analysis",
+        "Data extraction",
+        "Machine learning models",
+        "Optimization algorithms"
+      ]
+    },
+    {
+      "name": "AWS",
+      "description": ["API implementation", "API & Server monitoring"]
+    },
+    {
+      "name": "Git",
+      "description": ["Project version control", "Collaboration"]
+    },
+    {
+      "name": "Docker",
+      "description": [
+        "Environment simplification",
+        "Isolated testing environments"
+      ]
+    },
+    {
+      "name": "GraphQL",
+      "description": ["Building APIs", "Microservices"]
+    }
+  ]
+}
