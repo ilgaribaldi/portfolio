@@ -19,6 +19,7 @@ const Profile = () => {
       }}
     >
       <Avatar
+        className="avatar-hover"
         src={profile}
         size={128}
         style={{

@@ -25,7 +25,7 @@ const KeyTechSkills = () => {
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                 width: '100%',
                 height: '100%',
-                transition: 'transform 0.3s ease-out',
+                transition: 'transform 0.2s ease-out',
               }}
               hoverable
               onMouseEnter={(e) => {
@@ -38,7 +38,7 @@ const KeyTechSkills = () => {
               <List.Item style={{ listStyleType: 'none', paddingLeft: 0 }}>
                 <List.Item.Meta
                   title={<Tag color="#f50">{item.name}</Tag>}
-                  style={{ marginBottom: '-8px' }}
+                  style={{ marginBottom: '-0px', marginTop: '-18px' }}
                 />
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                   {item.description.map((point) => (
