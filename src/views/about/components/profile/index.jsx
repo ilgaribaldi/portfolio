@@ -3,6 +3,7 @@ import { Avatar, Typography } from 'antd';
 import './index.css';
 import profile from './profile.jpg';
 
+
 const { Title, Text } = Typography;
 
 const Profile = () => {

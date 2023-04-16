@@ -1,7 +1,7 @@
 const particlesParams = {
   particles: {
     number: {
-      value: 25,
+      value: 50,
       density: {
         enable: true,
         value_area: 800,
@@ -37,7 +37,7 @@ const particlesParams = {
     },
     size: {
       value: 3,
-      random: true,
+      random: false,
       anim: {
         enable: false,
         speed: 40,
@@ -217,7 +217,7 @@ const hexagonParams = {
   delay: 0,
   fullScreen: {
     enable: false,
-    zIndex: -1
+    zIndex: 1,
   },
   detectRetina: true,
   duration: 0,
@@ -325,17 +325,17 @@ const hexagonParams = {
         area: {
           gradient: {
             start: {
-              value: "#ffffff"
+              value: "transparent"
             },
             stop: {
-              value: "#ffffff"
+              value: "transparent"
             }
           },
           radius: 1000
         },
         shadow: {
           color: {
-            value: "#ffffff"
+            value: "transparent"
           },
           length: 2000
         }

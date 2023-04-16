@@ -20,7 +20,6 @@ const Contact = () => {
           zIndex: 2,
         }}
       >
-        <BackgroundParticles id="1" />
         <div
           style={{
             marginTop: '3rem',
