@@ -38,7 +38,7 @@ const Contact = () => {
         style={{
           minHeight: '55vh',
           position: 'relative',
-          zIndex: 2,
+          zIndex: 0,
         }}
       >
         <BackgroundParticles id="2" />

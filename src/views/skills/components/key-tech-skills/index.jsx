@@ -3,6 +3,7 @@ import { Row, Col, List, Tag, Card } from 'antd';
 import './index.css';
 import { Divider } from 'antd';
 import info from './info.json';
+import { BackgroundSeaAnemone } from '../../../../components/particles';
 
 
 const { techSkills } = info;
@@ -17,7 +18,7 @@ const KeyTechSkills = () => {
       </div>
       <Divider />
       <Row gutter={[16, 16]} wrap>
-        {techSkills.map((item) => (
+        {techSkills.map((item, index) => (
           <Col xs={24} sm={12} md={6} key={item.name}>
             <Card
               style={{
@@ -35,16 +36,17 @@ const KeyTechSkills = () => {
                 e.currentTarget.style.transform = 'scale(1)';
               }}
             >
-              <List.Item style={{ listStyleType: 'none', paddingLeft: 0 }}>
+              <BackgroundSeaAnemone id={String(index)}/>
+              <List.Item style={{ listStyleType: 'none', paddingLeft: 0, zIndex:3 }}>
                 <List.Item.Meta
                   title={<Tag color="#f50">{item.name}</Tag>}
-                  style={{ marginBottom: '-0px', marginTop: '-18px' }}
+                  style={{ marginBottom: '-0px', marginTop: '-18px',  zIndex:3 }}
                 />
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                   {item.description.map((point) => (
                     <div
                       key={point}
-                      style={{ marginRight: '1px', marginBottom: '10px' }}
+                      style={{ marginRight: '1px', marginBottom: '10px',  zIndex:3 }}
                       className="tag-wrapper"
                     >
                       <Tag color="#5af">{point}</Tag>

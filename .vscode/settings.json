@@ -31,5 +31,8 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "vim.handleKeys": {
+    "<C-c>": false
+  }
 }

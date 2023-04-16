@@ -1,7 +1,8 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
-import { particlesParams } from './params';
+import { loadSeaAnemonePreset } from 'tsparticles-preset-sea-anemone';
+import { particlesParams, seaAnemoneParams, hexagonParams } from './params';
 
 const style = {
   position: 'absolute',
@@ -33,4 +34,46 @@ const BackgroundParticles = ({ id }) => {
   );
 };
 
-export { BackgroundParticles };
+const BackgroundSeaAnemone = ({ id }) => {
+  return (
+    <Particles
+      id={id}
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={seaAnemoneParams}
+      style={style}
+    />
+  );
+};
+
+const BackgroundHexagons = ({ id }) => {
+  return (
+    <Particles
+      id={id}
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={hexagonParams}
+      style={style}
+    />
+  );
+};
+
+const BackgroundParticlesSeaAnemone = ({ id }) => {
+  const seaAnemoneInit = async (main) => {
+    console.log(main);
+    await loadSeaAnemonePreset(main);
+    await loadFull(main);
+  };
+
+  return (
+    <Particles
+      id={id}
+      init={seaAnemoneInit}
+      loaded={particlesLoaded}
+      options={{ preset: 'seaAnemone' }}
+      style={style}
+    />
+  );
+};
+
+export { BackgroundParticles, BackgroundSeaAnemone, BackgroundHexagons, BackgroundParticlesSeaAnemone };

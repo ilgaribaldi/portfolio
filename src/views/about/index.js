@@ -6,7 +6,7 @@ import Education from './components/education';
 
 const About = () => {
   return (
-    <div style={{ padding: 24 }}>
+    <div style={{ padding: 24, minHeight: '90vh' }}>
       <Profile />
       <Divider />
       <Employment></Employment>
