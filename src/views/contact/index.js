@@ -3,7 +3,6 @@ import { BackgroundParticles } from '../../components/particles';
 import Links from './components/links';
 import Info from './components/info';
 
-
 const Contact = () => {
   return (
     <div
@@ -13,22 +12,13 @@ const Contact = () => {
       }}
     >
       <div
-        className="hello"
         style={{
           padding: '2rem',
           position: 'relative',
           zIndex: 2,
         }}
       >
-        <div
-          style={{
-            marginTop: '3rem',
-            marginBottom: '3rem',
-            position: 'relative',
-          }}
-        >
-          <Links />
-        </div>
+        <Links />
       </div>
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Info />
