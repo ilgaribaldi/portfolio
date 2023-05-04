@@ -37,16 +37,16 @@ const KeyTechSkills = () => {
               }}
             >
               <BackgroundSeaAnemone id={String(index)}/>
-              <List.Item style={{ listStyleType: 'none', paddingLeft: 0, zIndex:3 }}>
+              <List.Item style={{ listStyleType: 'none', paddingLeft: 0, zIndex:1 }}>
                 <List.Item.Meta
                   title={<Tag color="#f50">{item.name}</Tag>}
-                  style={{ marginBottom: '-0px', marginTop: '-18px',  zIndex:3 }}
+                  style={{ marginBottom: '-0px', marginTop: '-18px',  zIndex:1 }}
                 />
                 <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                   {item.description.map((point) => (
                     <div
                       key={point}
-                      style={{ marginRight: '1px', marginBottom: '10px',  zIndex:3 }}
+                      style={{ marginRight: '1px', marginBottom: '10px',  zIndex:1 }}
                       className="tag-wrapper"
                     >
                       <Tag color="#5af">{point}</Tag>

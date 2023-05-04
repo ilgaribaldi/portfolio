@@ -18,7 +18,7 @@ const MyHeader = () => {
     <Header
       style={{
         position: 'fixed',
-        zIndex: 3,
+        zIndex: 1000,
         width: '100%',
         backgroundColor: '#001529',
         boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
